@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
 
-<p>
-  <strong>Name:</strong>
-  <%= @blog.user.name %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+    <p>
+      <strong>Name</strong><br>
+      <%= @blog.user.name %>
+    </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
+    <p>
+      <strong>Title</strong><br>
+      <%= @blog.title %>
+    </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+    <p>
+      <strong>Content</strong><br>
+      <%= @blog.content %>
+    </p>
+
+    <br>
+
+    <%= link_to 'Edit', edit_blog_path(@blog) , class: 'btn btn-default btn-sm btn-info' %>
+    <%= link_to 'Back', blogs_path , class: 'btn btn-default btn-sm btn-info' %>
+  </div>
+</div>
